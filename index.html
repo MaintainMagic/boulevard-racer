@@ -358,4 +358,5 @@ $('helpOverlay').querySelector('p').textContent+=' Traffic now includes sports c
 
 window.Boulevard={start,pause,resume,garage,audio:sound,fleetReady:()=>fleetPhoto.complete&&fleetPhoto.naturalWidth>0&&bikerPhoto.complete&&bikerPhoto.naturalWidth>0,adventureReady:()=>[coinPhoto,hitchPhotos,firePhoto].every(i=>i.complete&&i.naturalWidth>0),fireState:()=>fireFX?{age:clock-fireFX.start,active:state.mode==='crashed'&&state.crashReason==='traffic'&&clock-fireFX.start<2.1}:null,worldReady:()=>[coastPhoto,roadPhoto,trafficPhotos,turboPhoto,palmPhoto].every(i=>i.complete&&i.naturalWidth>0),catReady:()=>catAtlas.complete&&catAtlas.naturalWidth>0,photoReady:()=>dashPhoto.complete&&dashPhoto.naturalWidth>0&&wheelPhoto.complete&&wheelPhoto.naturalWidth>0,dump:()=>JSON.parse(JSON.stringify(state)),step:(n)=>{for(let i=0;i<n;i++)L.tick(state);updateUI();},steer:d=>L.steer(state,d),setState:s=>{Object.assign(state,s);},metrics:()=>({fps:frameTimes.length/frameTimes.reduce((a,b)=>a+b,0),cpuMs:lastCpu,viewStrength,reducedMotion:reduced,entities:state.traffic.length,width:W,height:H}),draw};requestAnimationFrame(frame);
 })();
-</script></body></html>
+</script><script src="tv-remote.js"></script>
+</body></html>
